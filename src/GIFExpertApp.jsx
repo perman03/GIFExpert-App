@@ -9,8 +9,8 @@ export const GIFExpertApp = () => {
     // useState Hook
     const [categories, setCategories] = useState(['Metal Gear', 'Sandman']);
     // Agregar nueva categoria 
-    const onAddCategory = () => {
-        setCategories([...categories, "Avengers"]);    //insertar nueva categoria
+    const onAddCategory = (newCategory) => {
+        setCategories([newCategory, ...categories]);    //insertar nueva categoria
     }
 
     return (
@@ -21,11 +21,14 @@ export const GIFExpertApp = () => {
 
 
         {/* INPUT */}
-        <AddCategory/>
+        <AddCategory 
+            // setCategories = {setCategories} 
+        
+            onNewCategory={onAddCategory}
+        />
 
 
         {/* GIF GRID */}
-        <button onClick={onAddCategory}>Agregar</button>
         <ol>
             {categories.map(category=>{
                 return <li key={category}>{category}</li>

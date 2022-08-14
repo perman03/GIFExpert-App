@@ -1,9 +1,12 @@
 import { useState } from "react"
 
-export const AddCategory = () => {
+
+
+// functional component 
+export const AddCategory = ({onNewCategory}) => {
   
     //hook
-    const [ inputValue, setInputValue ] = useState('Metal Gear'); 
+    const [ inputValue, setInputValue ] = useState(''); 
     
     //componente para ingresar busqueda en input
     const onInputChange = (event) =>{
@@ -12,13 +15,18 @@ export const AddCategory = () => {
     
     const onSubmit = (event) => {
         event.preventDefault();       //evita refrescar el navegador
-        console.log(inputValue); 
+        
+         // validacion de caracteres
+         if ( inputValue.trim().length <= 1) return; 
+        // setCategories( categories => [inputValue, ...categories]);
+        //borrar input al presionar enter
+        setInputValue('');         
+        onNewCategory(inputValue.trim()); 
+    
     }
-
   
     return (
-    <form onSubmit={(event) => onSubmit(event)}>
-
+    <form onSubmit={onSubmit}>
         <input 
             type="text" 
             placeholder="Busca tu GIF favorito" 
