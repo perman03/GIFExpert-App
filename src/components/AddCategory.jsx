@@ -16,12 +16,12 @@ export const AddCategory = ({onNewCategory}) => {
     const onSubmit = (event) => {
         event.preventDefault();       //evita refrescar el navegador
         
-         // validacion de caracteres
+         // validacion de caracteres para que no registre carcateres vacios o de solo un caracter
          if ( inputValue.trim().length <= 1) return; 
         // setCategories( categories => [inputValue, ...categories]);
-        //borrar input al presionar enter
-        setInputValue('');         
-        onNewCategory(inputValue.trim()); 
+        onNewCategory(inputValue.trim());    
+        setInputValue('');          //borrar input al presionar enter 
+        
     
     }
   

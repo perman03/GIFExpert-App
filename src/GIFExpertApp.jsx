@@ -1,16 +1,19 @@
 import React from "react"; 
 import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 
 // First component
 export const GIFExpertApp = () => {
 
     // useState Hook
-    const [categories, setCategories] = useState(['Metal Gear', 'Sandman']);
+    const [categories, setCategories] = useState(['SANDMAN']);
     // Agregar nueva categoria 
     const onAddCategory = (newCategory) => {
-        setCategories([newCategory, ...categories]);    //insertar nueva categoria
+        
+        if(categories.includes(newCategory.toUpperCase())) return;    //validacion para nombres unicos y no repetibles. Se convierte todo a mayusculas
+        setCategories([newCategory.toUpperCase(), ...categories]);    //insertar nueva categoria
     }
 
     return (
@@ -24,16 +27,21 @@ export const GIFExpertApp = () => {
         <AddCategory 
             // setCategories = {setCategories} 
         
-            onNewCategory={onAddCategory}
+            onNewCategory={onAddCategory}   //props que se manda a AddCategory
         />
 
 
         {/* GIF GRID */}
-        <ol>
-            {categories.map(category=>{
-                return <li key={category}>{category}</li>
-            })}
-        </ol>
+
+        {categories.map((category)=>(
+            <GifGrid key={category} 
+            category = {category} 
+
+            />       // utiliza el GifGrdi component          
+            ))
+        }
+
+
         
         </>
     )
