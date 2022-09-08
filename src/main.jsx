@@ -5,9 +5,9 @@ import './style.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
   
     <GIFExpertApp />
 
-  // </React.StrictMode>
+  </React.StrictMode>
 )

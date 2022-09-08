@@ -37,7 +37,7 @@ export const GIFExpertApp = () => {
             <GifGrid key={category} 
             category = {category} 
 
-            />       // utiliza el GifGrdi component          
+            />       // utiliza el GifGrid component          
             ))
         }
 
