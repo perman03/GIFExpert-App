@@ -1,7 +1,14 @@
 
-export const GifGridItem = () => {
+export const GifGridItem = ({title, url, id}) => {
+  
+  
+  
+  //html para mostrar imagenes
   return (
-    <div>GifGridItem</div>
+    <div className="card">
+        <img src={url} alt={title}></img>
+        <p>{title}</p>
+    </div>
   )
 }
 
