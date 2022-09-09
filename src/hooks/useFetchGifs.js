@@ -1,7 +1,7 @@
 // CUSTOM HOOKS
 
 import { useEffect, useState } from "react";
-import { getGifi } from "../../helpers/getGifi";
+import { getGifi } from "../helpers/getGifi";
 
 export const useFetchGifs = ( category ) => {
   
@@ -11,6 +11,7 @@ export const useFetchGifs = ( category ) => {
     const getImages = async() => {
       const newImages = await getGifi(category); 
       setImages(newImages); 
+      setIsLoading(false); 
     }
 
     useEffect( () => {     
