@@ -6,7 +6,7 @@ import { AddCategory, GifGrid } from "./components";
 export const GIFExpertApp = () => {
 
     // useState Hook
-    const [categories, setCategories] = useState(['SANDMAN']);
+    const [categories, setCategories] = useState(['ARTHUR MORGAN']);
     // Agregar nueva categoria 
     const onAddCategory = (newCategory) => {
         
