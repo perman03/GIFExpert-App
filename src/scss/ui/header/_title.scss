@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as mx; 
+
+.header__titulo{
+    text-align: left;
+    font-size: 2.5rem;
+    color: v.$blanco;
+
+    @include mx.tablet{
+        text-align: center;
+    }
+
+}
+
+.header__info{
+    color: v.$blanco;
+    text-align: left;
+    font-size: 1rem;
+
+    @include mx.tablet{
+        text-align: center;
+    }
+}
+
+.category__title{
+    color: v.$blanco;
+}

@@ -27,7 +27,7 @@ export const AddCategory = ({onNewCategory}) => {
   
     return (
     <form onSubmit={onSubmit}>
-        <input 
+        <input class = 'input'
             type="text" 
             placeholder="Busca tu GIF favorito" 
             value={inputValue}

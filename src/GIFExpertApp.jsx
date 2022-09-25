@@ -18,7 +18,8 @@ export const GIFExpertApp = () => {
         <>
 
         {/* titulo */}
-        <h1>Gif Expert App (React Vite) </h1>
+        <h1 class='header__titulo'>Gif Expert App </h1>
+        <p class='header__info'>Encuentra tu GIF favorito</p>
 
 
         {/* INPUT */}
