@@ -19,7 +19,7 @@ export const GIFExpertApp = () => {
 
         {/* titulo */}
         <h1 class='header__titulo'>Gif Expert App </h1>
-        <p class='header__info'>GIFs para ti. Gifs para todos :)</p>
+        <p class='header__info'>GIFs para ti. GIFs para todos :)</p>
 
 
         {/* INPUT */}
