@@ -14,9 +14,8 @@ GifExpert App: Aplicación de Gifs vía Giphy realizada con React JS
 </p>
 <br/>
 
-<p align="center"> Visita el sitio en el siguiente link: </p>
-<br/>
-<p align="center"> perman03.github.io/GIFExpert-App/ </p>
+<p align="center"> Visita mi proyecto en el siguiente link: <a align="center" href="perman03.github.io/GIFExpert-App/"> perman03.github.io/GIFExpert-App/ </a> </p>
+
 
 
 # Vite ⚡
